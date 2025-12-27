@@ -39,6 +39,8 @@ cd meowfacts-API
 Simply open the `index.html` file in your browser to start seeing meow facts!
 
 ---
+### Demo
+[meowfactsDEMO.webm](https://github.com/user-attachments/assets/08493fd1-344c-469a-adf3-4e68940836ed)
 
 ## 🛠️ Built With
 
