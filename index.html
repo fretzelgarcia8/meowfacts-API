@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meow Facts</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka+One&family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+ 
+<!-- Audio toggle button with helper text -->
+<div class="audio-container">
+  <button id="btn-audio" class="audio-toggle">
+    <img src="/meowfacts/pictures/play.png" alt="music toggle" class="audio-icon">
+  </button>
+  <p class="audio-text">tap this cat to pause/play music</p>
+</div>
+
+<audio id="bg-audio" loop autoplay>
+  <source src="WaltzBallad.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+  <div class="notebook">
+    <img src="/meowfacts/pictures/clip.png" alt="paper clip" class="paperclip">
+    <div class="page" id="page">
+      <h1>Meow Facts ᨐฅ</h1>
+
+<div id="loader" class="loader hidden">
+  <img src="/meowfacts/pictures/catload.png" alt="cat loading" class="cat-loader">
+  <p>Loading a cute meow fact...</p>
+</div>
+
+      <p id="fact">Gently tap the Sillybean Cat to get a Meow Facts!</p>
+
+      <button id="btn"></button>
+    </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+
+  /* GIF background */
+  background: url("/meowfacts/pictures/bcat.gif") no-repeat center center fixed;
+  background-size: cover;  /* fill the screen */
+}
+
+/* Notebook container (3D space) */
+.notebook {
+  perspective: 1500px;
+}
+/* Paper clip on top of notebook */
+.paperclip {
+  position: absolute;
+  top: -65px;          /* adjust vertical placement */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;         /* adjust size as needed */
+  height: auto;
+  z-index: 10;
+  pointer-events: none; /* so it doesn’t block clicks */
+}
+
+
+/* Page */
+.page {
+  width: auto;               /* responsive width */
+  max-width: 500px;          /* limit maximum width */
+  min-width: 360px;          /* default minimum width */
+  min-height: 420px;         /* fixed height */
+  
+  /* NEW: background image instead of lines */
+  background: url("whitecard.jpg") no-repeat center center;
+  background-size: cover;    /* fill notebook nicely */
+  
+  border-radius: 16px;
+  padding: 28px 24px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: transform 0.8s ease, width 0.5s ease; /* smooth width animation */
+  
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgb(255, 232, 129);
+  
+  overflow-wrap: break-word; /* wrap long text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+
+
+
+/* Title */
+h1 {
+  font-family: 'Chewy', cursive;
+  text-align: center;
+  color: #6594b4;
+  margin-bottom: 18px;
+}
+
+/* Fact text */
+#fact {
+   font-family: 'Fredoka One', cursive;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  min-height: 120px;
+}
+/* Button */
+button {
+  width: 90px;
+  height: 90px;
+  margin: 24px auto 0;
+  display: block;
+
+  background-image: url("/meowfacts/pictures/silly-button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  /* 3D effect */
+  filter: drop-shadow(0 8px 0 rgba(120, 90, 60, 0.6))
+          drop-shadow(0 16px 22px rgb(133, 172, 255));
+
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+button:active {
+  transform: translateY(6px);
+  filter: drop-shadow(0 3px 0 rgba(120, 90, 60, 0.6))
+          drop-shadow(0 8px 12px rgba(0,0,0,0.25));
+}
+
+.loader.hidden {
+  display: none;
+  text-align: center;  /* hide loader completely, including paw */
+}
+.loader p {
+  font-family: 'Chewy', cursive;  /* cute rounded font */
+  font-size: 15px;
+  color: #5e595b;                   /* soft pink pastel */
+  margin: 0 auto;
+  text-align: center;               /* center text under paw */
+}
+
+/* Paw loader */
+.cat-loader {
+  width: 50px;            /* adjust size */
+  height: 70px;
+  display: block;
+  margin: 0 auto 10px;
+  animation: cat-spin 1s linear infinite;
+}
+
+/* Smooth fade class */
+/* Fade transition for elements */
+.fade {
+  transition: opacity -0.1s ease;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Audio toggle button styles */
+.audio-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  z-index: 100;
+}
+
+.audio-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  filter: none;
+}
+
+.audio-toggle img.audio-icon {
+  width: 35px;
+  height: 40px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: none;
+}
+
+.audio-text {
+  font-family: 'Fredoka One', cursive;
+  font-size: 12px;
+  color: #000000; /* pastel pink */
+  margin-top: -20px;  /* reduce space from icon */
+  margin-bottom: 0px;
+  line-height: 1;   /* tighter spacing */
+  user-select: none;
+}
+
+/* Spin animation for paw */
+@keyframes cat-spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
