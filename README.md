@@ -1,8 +1,8 @@
-# 🐾 Meow Facts ᨐฅ
+#  Meow Facts ᨐฅ
 
 A whimsical, interactive web application that serves up random cat facts with a "cute notebook" aesthetic. This project features a playful UI, smooth animations, and background music to create a cozy experience for cat lovers.
 
-## ✨ Features
+##  Features
 
 * **Random Fact Generator**: Fetches real-time cat facts using the [MeowFacts API](https://meowfacts.herokuapp.com/).
 * **Cute Notebook UI**: A stylized "paper and clip" interface with custom Google Fonts (`Chewy`, `Fredoka One`, `Quicksand`).
@@ -13,7 +13,7 @@ A whimsical, interactive web application that serves up random cat facts with a 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ Simply open the `index.html` file in your browser to start seeing meow facts!
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 * `index.html`: The main entry point featuring the notebook layout.
 * `style.css`: Contains the "notebook" styling, custom fonts, and background GIF settings.
@@ -60,6 +60,6 @@ Simply open the `index.html` file in your browser to start seeing meow facts!
 
 ---
 
-## 📝 License
+##  License
 
 This project is **not licensed** and is provided for **educational purposes only**.
